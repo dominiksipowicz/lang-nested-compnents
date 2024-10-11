@@ -1,9 +1,12 @@
-const langCache = { lang: "en" };
+import { cache } from "react";
+
+const langCache = cache(() => ({ lang: "en" }));
 
 export const setLang = (lang: string) => {
-  langCache.lang = lang;
+  const cache = langCache();
+  cache.lang = lang;
 };
 
 export const getLang = () => {
-  return langCache.lang;
+  return langCache().lang;
 };
