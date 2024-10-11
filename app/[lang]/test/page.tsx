@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageSelector from "../components/LanguageSelector";
+import LanguageSelector from "@/app/components/LanguageSelector";
 import { setLang } from "@/app/utils/languageUtils";
 
 const Page = ({ params }: { params: { lang: string } }) => {
@@ -7,7 +7,7 @@ const Page = ({ params }: { params: { lang: string } }) => {
   setLang(lang);
   return (
     <div>
-      <h1>Welcome to the Page</h1>
+      <h1>Welcome to the sub Page</h1>
       <p>This is a sample page component.</p>
 
       <LanguageSelector />
